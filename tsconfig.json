@@ -3,14 +3,14 @@
     "target": "ES2020",
     "module": "commonjs",
     "lib": ["ES2020"],
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./dist",       
+    "rootDir": "./",         /* CHANGED: Now looks at the root */
     "strict": true,
-    "esModuleInterop": true,           /* This is the fix for your error */
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./**/*"],     /* CHANGED: Include everything */
+  "exclude": ["node_modules", "dist"] /* CRITICAL: Don't compile these! */
 }
